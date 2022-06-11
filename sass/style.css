@@ -1,0 +1,114 @@
+* {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 10vh;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  background-color: deepskyblue;
+  margin: 0 10px;
+  border-radius: 50%;
+  -webkit-animation: animate 2s infinite linear;
+          animation: animate 2s infinite linear;
+}
+.circle:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.circle:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.circle:nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes animate {
+  0%, 100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+}
+
+@keyframes animate {
+  0%, 100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+}
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+.container .item-1 {
+  width: 48%;
+  max-width: 300px;
+}
+.container .item-1 h1 {
+  padding: 10px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.container .item-1 p {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.container .item-2 {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .item-2 img {
+  width: min(100%, 300px);
+  margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
