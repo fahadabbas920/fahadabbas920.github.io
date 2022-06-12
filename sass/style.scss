@@ -57,10 +57,12 @@
         justify-content: center;
         align-items: center;
         height: 90vh;
+        // max-width: 1300px;
+        margin: 0 10%;
 
         .item{
             margin: 10%;
-            padding: 1.5rem;
+            // padding: 1.5rem;
             width: 40%;
         }
 
@@ -76,8 +78,9 @@
         }
         .item-2{
             flex-grow: 1;
+            text-align: center;
             img{
-                max-width: 100%;
+                width: min(500px,100%);
             }
         }
 
@@ -86,7 +89,7 @@
             padding-top: 10vh;
             .item{
                 width: 90%;
-                margin: 0;
+                // margin: 0;
             }
         }
     }
@@ -97,7 +100,7 @@
         margin: 0 auto;
         background-color: rgb(0, 0, 0);
         color: white;
-        font-size: clamp(0.8rem, 2vw, 1.4rem);
+        font-size: clamp(0.7rem, 2vw, 2rem);
         display: flex;
         justify-content: center;
         align-items: center;
