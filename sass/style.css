@@ -6,6 +6,14 @@
           box-sizing: border-box;
 }
 
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(67, 66, 66, 0.508)), to(rgba(0, 0, 0, 0.508))), url(/assets/background.jpg);
+  background: linear-gradient(rgba(67, 66, 66, 0.508), rgba(0, 0, 0, 0.508)), url(/assets/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,13 +26,18 @@
           align-items: center;
   margin-bottom: 20px;
   position: absolute;
-  top: 10vh;
+  top: 20vh;
+}
+@media screen and (max-width: 960px) {
+  .loader {
+    top: 10vh;
+  }
 }
 
 .circle {
   height: 20px;
   width: 20px;
-  background-color: deepskyblue;
+  background-color: rgb(0, 191, 255);
   margin: 0 10px;
   border-radius: 50%;
   -webkit-animation: animate 2s infinite linear;
@@ -74,38 +87,65 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
-  margin: 0 auto;
-  max-width: 1300px;
+  position: relative;
+  color: white;
+}
+.container .item {
+  margin: 10%;
+  padding: 1.5rem;
+  width: 40%;
 }
 .container .item-1 {
-  width: 48%;
-  max-width: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
 }
 .container .item-1 h1 {
-  padding: 10px;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-size: clamp(2rem, 2vw, 4rem);
 }
 .container .item-1 p {
-  margin-bottom: 2rem;
-  text-align: center;
+  font-size: clamp(1.5rem, 1.8vw, 3rem);
 }
 .container .item-2 {
-  width: 48%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.container .item-2 img {
+  max-width: 100%;
+}
+@media screen and (max-width: 960px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 10vh;
+  }
+  .container .item {
+    width: 90%;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5vh;
 }
-.container .item-2 img {
-  width: min(100%, 300px);
-  margin: 0 auto;
-}
-@media screen and (max-width: 900px) {
-  .container {
+@media screen and (max-width: 960px) {
+  footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
